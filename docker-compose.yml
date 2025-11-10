@@ -22,3 +22,5 @@ services:
       - MLFLOW_TRACKING_URI=http://mlflow:5000
     volumes:
       - .:/app
+env_file:
+  - .env

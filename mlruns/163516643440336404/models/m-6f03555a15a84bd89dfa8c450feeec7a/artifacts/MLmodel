@@ -1,0 +1,22 @@
+artifact_path: file:C:/Users/HP/Desktop/SEM 7/capstone/SCM_MLOps/mlruns/163516643440336404/models/m-6f03555a15a84bd89dfa8c450feeec7a/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.13.5
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: ubj
+    xgb_version: 3.1.1
+mlflow_version: 3.6.0
+model_id: m-6f03555a15a84bd89dfa8c450feeec7a
+model_size_bytes: 527859
+model_uuid: m-6f03555a15a84bd89dfa8c450feeec7a
+prompts: null
+run_id: 8b13f1b7c2c843c18fc48e92c26a3e2e
+utc_time_created: '2025-11-10 19:14:31.330463'

@@ -10,6 +10,10 @@ def evaluate(model_path, data_path):
     model = joblib.load(model_path)
 
     X = df[[col for col in df.columns if col.startswith("lag_")]]
+
+    for col in ["month", "year"]:
+        if col in df.columns:
+            X[col] = df[col]
     y = df["Total_Purchases"]
 
     y_pred = model.predict(X)
@@ -20,7 +24,7 @@ def evaluate(model_path, data_path):
     with open("metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
 
-    print(f"✅ Evaluation complete. MAE={mae:.2f}, RMSE={rmse:.2f}")
+    print(f"✅ Evaluation complete.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/HP/Desktop/SEM 7/capstone/SCM_MLOps/mlruns/163516643440336404/3bbf3a799b004682ba0e7b28fb774a03/artifacts
+end_time: 1762802703866
+entry_point_name: ''
+experiment_id: '163516643440336404'
+lifecycle_stage: active
+run_id: 3bbf3a799b004682ba0e7b28fb774a03
+run_name: spiffy-stag-85
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762802698392
+status: 3
+tags: []
+user_id: HP

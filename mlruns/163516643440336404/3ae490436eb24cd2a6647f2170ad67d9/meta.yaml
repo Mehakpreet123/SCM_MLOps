@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/HP/Desktop/SEM 7/capstone/SCM_MLOps/mlruns/163516643440336404/3ae490436eb24cd2a6647f2170ad67d9/artifacts
+end_time: 1762802749177
+entry_point_name: ''
+experiment_id: '163516643440336404'
+lifecycle_stage: active
+run_id: 3ae490436eb24cd2a6647f2170ad67d9
+run_name: omniscient-crab-989
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762802743820
+status: 3
+tags: []
+user_id: HP

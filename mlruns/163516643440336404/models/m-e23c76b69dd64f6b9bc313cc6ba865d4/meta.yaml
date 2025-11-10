@@ -1,0 +1,10 @@
+artifact_location: file:C:/Users/HP/Desktop/SEM 7/capstone/SCM_MLOps/mlruns/163516643440336404/models/m-e23c76b69dd64f6b9bc313cc6ba865d4/artifacts
+creation_timestamp: 1762802698716
+experiment_id: '163516643440336404'
+last_updated_timestamp: 1762802703833
+model_id: m-e23c76b69dd64f6b9bc313cc6ba865d4
+model_type: null
+name: model
+source_run_id: 3bbf3a799b004682ba0e7b28fb774a03
+status: 2
+status_message: null

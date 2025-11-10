@@ -1,0 +1,93 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py --dataset 
+      sahilprajapati143/retail-analysis-large-dataset --output_dir data/raw
+    deps:
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: bc0222bede082c72ea745ee45adae911
+      size: 1537
+    outs:
+    - path: data/raw
+      hash: md5
+      md5: 8bb8d604746266e18e1bea38d42b7039.dir
+      size: 84920745
+      nfiles: 1
+  data_preprocessing:
+    cmd: python src/data_preprocessing.py --in_dir data/raw --out_file 
+      data/processed/monthly_data.csv
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 8bb8d604746266e18e1bea38d42b7039.dir
+      size: 84920745
+      nfiles: 1
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 3147a5ed0654231d8cc1b545b3226b32
+      size: 1793
+    outs:
+    - path: data/processed/monthly_data.csv
+      hash: md5
+      md5: a70a43ad43e498d2629a5add2ed94405
+      size: 2590441
+  feature_engineering:
+    cmd: python src/features.py --input_file data/processed/monthly_data.csv 
+      --output_file data/processed/monthly_data_lags.csv --lags 1 2 3 4 6
+    deps:
+    - path: data/processed/monthly_data.csv
+      hash: md5
+      md5: a70a43ad43e498d2629a5add2ed94405
+      size: 2590441
+    - path: src/features.py
+      hash: md5
+      md5: edf5a09f89054d72bd252b98a2c49bde
+      size: 1662
+    outs:
+    - path: data/processed/monthly_data_lags.csv
+      hash: md5
+      md5: 479c1eb27915fcde32c6bee92e30df85
+      size: 4524892
+  train_model:
+    cmd: python src/train_model.py --data data/processed/monthly_data_lags.csv 
+      --params params.yaml
+    deps:
+    - path: data/processed/monthly_data_lags.csv
+      hash: md5
+      md5: 479c1eb27915fcde32c6bee92e30df85
+      size: 4524892
+    - path: params.yaml
+      hash: md5
+      md5: a063fe3fd7d7c4ecd5571eca488cbf83
+      size: 276
+    - path: src/train_model.py
+      hash: md5
+      md5: 784189232a438effac20e005e4913d99
+      size: 3587
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: dfd1da3cf20cdcf8f5ad72196a57241e
+      size: 729306
+  evaluate_model:
+    cmd: python src/evaluate.py --model models/model.pkl --data 
+      data/processed/monthly_data_lags.csv
+    deps:
+    - path: data/processed/monthly_data_lags.csv
+      hash: md5
+      md5: 479c1eb27915fcde32c6bee92e30df85
+      size: 4524892
+    - path: models/model.pkl
+      hash: md5
+      md5: dfd1da3cf20cdcf8f5ad72196a57241e
+      size: 729306
+    - path: src/evaluate.py
+      hash: md5
+      md5: 0ebbbceb41d81b98f71b7efa0c0150fb
+      size: 1039
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: ea72cd256ad0881157c24ecc8c9fbabe
+      size: 63

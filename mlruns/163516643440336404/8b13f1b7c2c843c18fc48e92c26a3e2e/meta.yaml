@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/HP/Desktop/SEM 7/capstone/SCM_MLOps/mlruns/163516643440336404/8b13f1b7c2c843c18fc48e92c26a3e2e/artifacts
+end_time: 1762802079060
+entry_point_name: ''
+experiment_id: '163516643440336404'
+lifecycle_stage: active
+run_id: 8b13f1b7c2c843c18fc48e92c26a3e2e
+run_name: invincible-snake-597
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762802070578
+status: 3
+tags: []
+user_id: HP
