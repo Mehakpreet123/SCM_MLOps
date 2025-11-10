@@ -24,25 +24,25 @@ This project implements a **monthly demand forecasting pipeline** using Python, 
 
 
 
-SCM_MLOps/
-├── data/
-│ ├── raw/ # Raw data ingested from Kaggle
-│ └── processed/ # Preprocessed and feature-engineered data
-├── models/
-│ └── model.pkl # Trained model file
-├── src/
-│ ├── data_ingestion.py # Script to download dataset from Kaggle
-│ ├── data_preprocessing.py # Script to clean and aggregate data
-│ ├── feature.py # Script to create lag features
-│ ├── train_model.py # Script to train the model
-│ └── evaluate.py # Script to evaluate the model
-├── params.yaml # Model and training parameters
-├── metrics.json # Evaluation metrics
-├── .dvc/ # DVC metadata
-├── .dvcignore
-├── requirements.txt
-├── .env # Environment variables
-└── README.md
+SCM_MLOps/  
+├── data/  
+│ ├── raw/ # Raw data ingested from Kaggle  
+│ └── processed/ # Preprocessed and feature-engineered data  
+├── models/  
+│ └── model.pkl # Trained model file  
+├── src/  
+│ ├── data_ingestion.py # Script to download dataset from Kaggle  
+│ ├── data_preprocessing.py # Script to clean and aggregate data  
+│ ├── features.py # Script to create lag features  
+│ ├── train_model.py # Script to train the model  
+│ └── evaluate.py # Script to evaluate the model  
+├── params.yaml # Model and training parameters  
+├── metrics.json # Evaluation metrics  
+├── .dvc/ # DVC metadata  
+├── .dvcignore  
+├── requirements.txt  
+├── .env # Environment variables  
+└── README.md  
 
 ---
 
