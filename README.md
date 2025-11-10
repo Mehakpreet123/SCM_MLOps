@@ -36,8 +36,7 @@ SCM_MLOps/
 │ ├── features.py # Script to create lag features  
 │ ├── train_model.py # Script to train the model  
 │ └── evaluate.py # Script to evaluate the model  
-├── params.yaml # Model and training parameters  
-├── metrics.json # Evaluation metrics  
+├── params.yaml # Model and training parameters   
 ├── .dvc/ # DVC metadata  
 ├── .dvcignore  
 ├── requirements.txt  
